@@ -1,76 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-:root {
-  --max-content: 1240px;
-  --searchbar-gap: 7px;
-  --nav-main-tier-height: 46px;
-  --nav-tiers-height: 38px;
-  --nav-second-tier-top: 59px;
-  --gray-primary: #d7d7d7;
-  --gray-secondary: #a3a2a2;
-  --gray-ternary: #dddddd;
-  --gray-4: #eeeeee;
-  --pink-primary: #ecc7d0;
-  --pink-secondary: #eb316b;
-  --bg-active: #f7f7f7;
-}
-
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #aaa;
-  background: #fff;
-  overflow-x: hidden;
-  min-height: 100vh;
-  margin: 0 auto;
-  font-family: Lato;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-button,
-a {
-  display: block;
-  background: #fff;
-  margin: 0;
-  text-decoration: none;
-  font-size: 9pt;
-  cursor: pointer;
-  text-align: center;
-  outline: none;
-  border: none;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  color: currentColor;
-}
-
-header {
-  background-color: #fff;
-  width: 100%;
-  display: flex;
-  height: 240px;
-  flex-direction: column;
-}
-
-.dropdown {
-  border-radius: 2px;
-  border: 3px solid var(--gray-4);
-  box-shadow: 0 0 10px var(--gray-ternary);
-}
-
 .topbar__wrapper {
   width: 100%;
   display: flex;
@@ -514,4 +442,75 @@ header {
 }
 .categories__nav .active-color {
   color: var(--pink-primary);
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  height: 240px;
+  flex-direction: column;
+}
+header button,
+header a {
+  display: block;
+  background: #fff;
+  margin: 0;
+  text-decoration: none;
+  font-size: 9pt;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.dropdown {
+  border-radius: 2px;
+  border: 3px solid var(--gray-4);
+  box-shadow: 0 0 10px var(--gray-ternary);
+}
+
+:root {
+  --max-content: 1240px;
+  --searchbar-gap: 7px;
+  --nav-main-tier-height: 46px;
+  --nav-tiers-height: 38px;
+  --nav-second-tier-top: 59px;
+  --gray-primary: #d7d7d7;
+  --gray-secondary: #a3a2a2;
+  --gray-ternary: #dddddd;
+  --gray-4: #eeeeee;
+  --pink-primary: #ecc7d0;
+  --pink-secondary: #eb316b;
+  --bg-active: #f7f7f7;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #aaa;
+  background: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: Lato;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: currentColor;
 }
