@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postcssify": "npx postcss *.css --use autoprefixer -d build/"
+    "server": "live-server",
+    "sass": "sass -c --watch --no-source-map styles.scss build/styles.css",
+    "dev": "concurrently \"npm run sass\" \"npm run server\""
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "postcss-cli": "^10.1.0"
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.63.6"
   }
 }

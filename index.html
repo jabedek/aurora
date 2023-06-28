@@ -8,33 +8,133 @@
   </head>
   <body>
     <header>
-      <!-- Top bar -->
-      <div class="topbar">
-        <section>
-          <a class="topbar__link" href="tel:+293939098">
-            <div class="icon icon--phone">293939098</div>
-          </a>
-          <a class="topbar__link" href="mailto:kontakt@aurorabox.pl">
-            <div class="icon icon--email">kontakt@aurorabox.pl</div>
-          </a>
-        </section>
+      <div class="topbar__wrapper">
+        <div class="topbar__content">
+          <section>
+            <a class="topbar__link" href="tel:+293939098">
+              <div class="icon icon--phone">293 939 098</div>
+            </a>
+            <a class="topbar__link" href="mailto:kontakt@aurorabox.pl">
+              <div class="icon icon--email">kontakt@aurorabox.pl</div>
+            </a>
+          </section>
 
-        <section>
-          <button class="topbar__btn">
-            <div class="icon icon--login">Zaloguj się</div>
-          </button>
-          <button class="topbar__btn">
-            <div class="icon icon--signup">Załóż konto</div>
-          </button>
-        </section>
+          <section>
+            <button class="topbar__btn">
+              <div class="icon icon--login">Zaloguj się</div>
+            </button>
+            <button class="topbar__btn">
+              <div class="icon icon--signup">Załóż konto</div>
+            </button>
+          </section>
+        </div>
       </div>
 
-      <!-- Logo, search, cart -->
-      <div class="shop"></div>
+      <div class="cta__wrapper">
+        <div class="cta__content">
+          <section class="logo"></section>
+          <section class="search">
+            <div class="searchbar">
+              <input
+                class="searchbar__input"
+                type="text"
+                placeholder="Co chcesz kupić?"
+              />
+              <div class="searchbar__icon"></div>
+            </div>
+          </section>
+          <section class="shopping">
+            <div class="basket" tabindex="0">
+              <div class="basket__icon">
+                <div class="basket__counter">2</div>
+              </div>
+              <p class="basket__text">Twój koszyk</p>
+              <div class="products dropdown">
+                <div class="products__total">
+                  <p>Produkty w koszyku: <span>2</span></p>
+                  <p>Kwota do zapłaty: <span>207.00 zł</span></p>
+                </div>
+                <ul class="products__list">
+                  <li class="product">
+                    <img class="product__photo" src="../assets/product.png" />
+                    <div class="product__desc">
+                      <p class="product__title">
+                        Biustonosz push-up line mos 12
+                      </p>
+                      <p class="product__price">59.00 zł</p>
+                      <div class="product__manage">
+                        <div class="product__qty">
+                          ilość:
+                          <p>1</p>
+                        </div>
+                        <div class="product__actions">
+                          <p class="icon icon--edit"></p>
+                          <p class="icon icon--delete"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="product">
+                    <img class="product__photo" src="../assets/product.png" />
+                    <div class="product__desc">
+                      <p class="product__title">
+                        Biustonosz push-up line mos 12
+                      </p>
+                      <p class="product__price">59.00 zł</p>
+                      <div class="product__manage">
+                        <div class="product__qty">
+                          ilość:
+                          <p>1</p>
+                        </div>
+                        <div class="product__actions">
+                          <p class="icon icon--edit"></p>
+                          <p class="icon icon--delete"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="products__purchase">
+                  <button>Zobacz koszyk</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
 
-      <!-- Categories nav -->
-      <div class="nav"></div>
+      <div class="categories__wrapper">
+        <div class="categories__content">
+          <ul class="categories__nav">
+            <li>
+              kategorie
+              <ul class="first-tier dropdown">
+                <li>
+                  Biustonosze
+                  <ul class="dropdown">
+                    <li>Bardotka</li>
+                    <li>Minimizer</li>
+                    <li>...</li>
+                  </ul>
+                </li>
+                <li>Body</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>nowości</li>
+            <li>promocje</li>
+            <li class="active-color">wyprzedaże</li>
+            <li>kolekcje</li>
+            <li>sezony</li>
+            <li>nasza oferta</li>
+            <li>trendy 2018</li>
+            <li>blog</li>
+            <li>kontakt</li>
+          </ul>
+        </div>
+      </div>
     </header>
+
     <main>
       <!-- ... -->
     </main>
