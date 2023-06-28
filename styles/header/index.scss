@@ -1,6 +1,6 @@
-@import "./topbar.scss";
-@import "./cta.scss";
-@import "./categories.scss";
+@use "topbar";
+@use "cta";
+@use "categories";
 
 header {
   background-color: #fff;
@@ -12,7 +12,7 @@ header {
   button,
   a {
     display: block;
-    background: #fff;
+    background: transparent;
     margin: 0;
     text-decoration: none;
     font-size: 9pt;

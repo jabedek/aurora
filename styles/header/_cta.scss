@@ -1,26 +1,21 @@
+@import "../utils/mixins";
+
 .cta {
   &__wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-
-    @media (max-width: 1024px) {
-      height: 130px;
-    }
+    @include media-max-width(1024px, $height: 130px);
   }
 
   &__content {
     padding-left: 10px;
     height: 140px;
-    justify-content: space-evenly;
-    display: flex;
     max-width: var(--max-content);
     width: 100%;
 
-    @media (max-width: 1024px) {
-      flex-wrap: wrap;
-      height: 80px;
-    }
+    @include simple-flex-parent(space-evenly, initial);
+    @include media-max-width(1024px, $flex-wrap: wrap, $height: 80px);
 
     section {
       height: 100%;
@@ -32,16 +27,12 @@
       background-repeat: no-repeat;
       background-position-y: 50%;
 
-      @media (max-width: 1024px) {
-        background-size: 55%;
-      }
+      @include media-max-width(1024px, $background-size: 55%);
     }
 
     section.search {
       width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      @include simple-flex-parent(flex-end, center);
 
       .searchbar {
         width: 480px;
@@ -82,26 +73,24 @@
         }
       }
 
-      @media (max-width: 1024px) {
-        order: 100;
-        width: 100%;
-        justify-content: center;
-        height: fit-content;
-        align-items: center;
-        height: 50px;
-      }
+      @include media-max-width(
+        1024px,
+        $order: 100,
+        $width: 100%,
+        $justify-content: center,
+        $align-items: center,
+        $height: 50px
+      );
     }
 
     section.shopping {
       width: 25%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      @include simple-flex-parent(flex-end, center);
       font-weight: 700;
       padding-right: 40px;
 
       .basket {
-        display: flex;
+        @include simple-flex-parent(initial, initial);
         position: relative;
         margin-bottom: 10px;
 
@@ -110,7 +99,7 @@
           outline: none;
 
           .products {
-            display: flex;
+            @include simple-flex-parent(initial, initial, column);
           }
         }
 
@@ -129,8 +118,8 @@
           position: absolute;
           width: 20px;
           height: 20px;
-          display: flex;
-          justify-content: center;
+
+          @include simple-flex-parent(center, initial);
           right: -10px;
           bottom: -10px;
           color: #fff;
@@ -188,9 +177,7 @@
             border-bottom: 1px solid var(--gray-4);
 
             .product {
-              display: flex;
-              align-items: center;
-              height: 100px;
+              @include simple-flex-parent(initial);
               width: 300px;
               margin: 20px 0;
               height: 78px;
@@ -203,8 +190,8 @@
               &__desc {
                 height: 78px;
                 width: 240px;
-                display: flex;
-                flex-direction: column;
+
+                @include simple-flex-parent(initial, initial, column);
                 padding-left: 14px;
               }
 
@@ -225,9 +212,7 @@
               }
 
               &__manage {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include simple-flex-parent(space-between, center);
                 width: 100%;
               }
 
@@ -254,8 +239,7 @@
               &__qty {
                 font-weight: 700;
                 font-size: 9pt;
-                display: flex;
-                align-items: center;
+                @include simple-flex-parent(initial, center);
 
                 p {
                   height: 25px;
@@ -270,9 +254,7 @@
           }
 
           &__purchase {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include simple-flex-parent();
             height: 90px;
 
             button {
@@ -287,9 +269,7 @@
         }
       }
 
-      @media (max-width: 1024px) {
-        padding-right: 0;
-      }
+      @include media-max-width(1024px, $padding-right: 0);
     }
   }
 }

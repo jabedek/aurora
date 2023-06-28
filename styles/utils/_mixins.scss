@@ -1,0 +1,22 @@
+@use "sass:meta";
+
+@mixin media-max-width($maxPx, $args...) {
+  @media (max-width: $maxPx) {
+    @debug meta.keywords($args);
+    @each $property, $value in meta.keywords($args) {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+@mixin simple-flex-parent(
+  $justifyContent: center,
+  $alignItems: center,
+  $flexDir: row,
+  $display: flex
+) {
+  display: $display;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDir;
+}

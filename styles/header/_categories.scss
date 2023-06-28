@@ -1,8 +1,9 @@
+@import "../utils/mixins";
+
 .categories {
   &__wrapper {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include simple-flex-parent(center, initial);
     padding: 0 10px;
   }
 
@@ -19,51 +20,31 @@
   }
 
   &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include simple-flex-parent(space-between, initial);
     width: 100%;
     text-transform: uppercase;
     font-size: 10.08pt;
     font-weight: 900;
     border-bottom: 2px solid var(--gray-primary);
 
-    @media (max-width: 1024px) {
-      flex-wrap: wrap;
-      height: fit-content;
-    }
+    @include media-max-width(1024px, $flex-wrap: wrap, $height: fit-content);
 
     li {
       cursor: pointer;
       position: relative;
       line-height: var(--nav-main-tier-height);
-      display: flex;
+      @include simple-flex-parent(initial);
       padding: 0 4px;
-      align-items: center;
 
-      @media (max-width: 998px) {
-        height: 26px;
-        margin: 0 44px;
-        font-size: 9.5pt;
-      }
-
-      @media (max-width: 850px) {
-        height: 26px;
-        margin: 0 32px;
-        font-size: 9.5pt;
-      }
-
-      @media (max-width: 768px) {
-        height: 26px;
-        margin: 0 26px;
-        font-size: 9.5pt;
-      }
-
-      @media (max-width: 595px) {
-        height: 26px;
-        margin: 0 18px;
-        font-size: 9.5pt;
-      }
+      @include media-max-width(
+        998px,
+        $margin: 0 44px,
+        $height: 26px,
+        $font-size: 9.5pt
+      );
+      @include media-max-width(850px, $margin: 0 32px);
+      @include media-max-width(768px, $margin: 0 26px);
+      @include media-max-width(595px, $margin: 0 18px);
 
       &:hover {
         ul {
